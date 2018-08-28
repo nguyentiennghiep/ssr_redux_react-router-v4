@@ -8,17 +8,17 @@ class List extends Component {
         return store.dispatch(actions.fetchTodos());
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.fetchTo();
     }
 
     render() {
-        console.log(this.props.todos);
+        // console.log(this.props.todos);
         return (
             
             <div >
                 {
-                    this.props.todos.map(item => {
+                    this.props.todos.todos.map(item => {
                         return (
                             <div key={item.id} >
                                 <span>{item.name}</span>
